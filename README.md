@@ -2,7 +2,7 @@
 
 ## Technologie
 
-Projekt został stworzony przy użyciu następujących technologii:
+Projekt jest tworzony przy użyciu następujących technologii:
 
 - Onion architecture
 - CQRS
