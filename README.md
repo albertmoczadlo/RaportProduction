@@ -17,4 +17,26 @@ Projekt jest tworzony przy użyciu następujących technologii:
 ## Autor
 
  Albert Moczadło
+ 
+ =========================================
+ 
+ # The project is created as part of learning and improving programming skills
+
+## Technologies
+
+The project is created using the following technologies:
+
+- Onion architecture
+- CQRS
+- C#
+- ASP.NET Core
+- Entity Framework
+- Razor
+- Bootstrap
+- HTML
+- JavaScript
+
+## Author
+
+ Albert Moczadło
 
