@@ -1,0 +1,45 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "provider": "jsdelivr",
+      "library": "cldrjs@0.5.5",
+      "destination": "wwwroot/lib/cldrjs/",
+      "files": [
+        "dist/cldr.js",
+        "dist/cldr/event.js",
+        "dist/cldr/supplemental.js"
+      ]
+    },
+    {
+      "provider": "cdnjs",
+      "library": "globalize@1.7.0",
+      "destination": "wwwroot/lib/globalize/",
+      "files": [
+        "globalize.js",
+        "globalize/date.js",
+        "globalize/number.js"
+      ]
+    },
+    {
+      "provider": "jsdelivr",
+      "library": "cldr-numbers-modern@42.0.0",
+      "destination": "wwwroot/lib/cldr-numbers-modern/",
+      "files": [
+        "main/en/currencies.json",
+        "main/en/numbers.json",
+        "main/pl/currencies.json",
+        "main/pl/numbers.json"
+      ]
+    },
+    {
+      "provider": "jsdelivr",
+      "library": "jquery-validation-globalize-fix@0.1.1",
+      "destination": "wwwroot/lib/jquery-validation-globalize-fix/",
+      "files": [
+        "jquery.validate.globalize.js"
+      ]
+    }
+  ]
+}
