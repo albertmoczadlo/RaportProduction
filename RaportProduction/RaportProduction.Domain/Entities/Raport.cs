@@ -14,7 +14,7 @@ public class Raport
 
     public ApplicationUser User { get; set; }
     public Product Product { get; set; }
-    public Container Containers { get; set; }
+    public Tank Tanks { get; set; }
     public ProductionTime ProductionTime { get; set; }
 
 }
