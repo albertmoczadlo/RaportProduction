@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel;
-
+﻿
 namespace RaportProduction.Domain.Entities;
 
 public class Raport
