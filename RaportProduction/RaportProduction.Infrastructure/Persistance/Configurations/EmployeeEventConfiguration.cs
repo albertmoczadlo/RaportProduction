@@ -17,6 +17,6 @@ class EmployeeEventConfiguration : IEntityTypeConfiguration<EmployeeEvent>
             .HasOne(x => x.User)
             .WithMany(x => x.EmployeeEvents)
             .HasForeignKey(x => x.UserId)
-            .OnDelete(DeleteBehavior.Restrict);
+            .OnDelete(DeleteBehavior.Restrict); //W tym przypadku używamy opcji Restrict, co oznacza, że nie można usunąć użytkownika, który ma powiązane zdarzenia pracownika.
     }
 }

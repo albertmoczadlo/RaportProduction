@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
 using RaportProduction.Domain.Entities;
+using System.Reflection.Emit;
 
 namespace RaportProduction.Infrastructure.Persistance.Configurations;
 
@@ -25,5 +26,16 @@ public class ApplicationUserConfiguration : IEntityTypeConfiguration<Application
             .WithOne(x => x.User)
             .HasForeignKey<Employee>(x => x.UserId)
             .OnDelete(DeleteBehavior.Restrict);
+
+        builder
+            .HasMany(o => o.Raports)
+            .WithOne(u => u.User)
+            .HasForeignKey(u => u.UserId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+            // modelBuilder.Entity<Order>()
+            //.HasMany(o => o.OrderItems)
+            //.WithOne(i => i.Order)
+            //.HasForeignKey(i => i.OrderId);
     }
 }
