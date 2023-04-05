@@ -7,7 +7,6 @@ public class ProductionTime
     public DayOfWeek Day { get; set; }
     public DateTime StartProductionTime { get; set; }
     public DateTime? EndProductionTime { get; set; }
-    public int RaportId { get; set; }
 
     public Raport Raport { get; set; }
 }
