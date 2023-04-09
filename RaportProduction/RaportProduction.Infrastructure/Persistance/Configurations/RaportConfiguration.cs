@@ -37,6 +37,12 @@ namespace RaportProduction.Infrastructure.Persistance.Configurations
                 .Property(q => q.Quantity)
                 .HasPrecision(9, 0)
                 .IsRequired(false);
+
+            builder
+                .Property(u=>u.Comments)
+                .HasMaxLength(600)
+                .IsRequired(false);
+
         }
     }
 }
