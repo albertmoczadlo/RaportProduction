@@ -1,4 +1,6 @@
-﻿namespace RaportProduction.Domain.Entities;
+﻿using RaportProduction.Domain.Enums;
+
+namespace RaportProduction.Domain.Entities;
 
 public class SettingPosition
 {
