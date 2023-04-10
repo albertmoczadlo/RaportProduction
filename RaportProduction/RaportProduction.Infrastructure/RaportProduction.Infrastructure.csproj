@@ -15,4 +15,8 @@
     <ProjectReference Include="..\RaportProduction.Application\RaportProduction.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Persistance\Extensions\" />
+  </ItemGroup>
+
 </Project>
