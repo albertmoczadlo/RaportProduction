@@ -1,6 +1,8 @@
-﻿namespace RaportProduction.Domain.Entities;
+﻿using RaportProduction.Domain.Enums;
 
-public class SettingPosition
+namespace RaportProduction.Domain.Entities;
+
+public class SettingsPosition
 {
     public int Id { get; set; }
     public string Key { get; set; }

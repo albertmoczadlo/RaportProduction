@@ -7,5 +7,5 @@ public class Settings
     public string Description { get; set; }
     public int Order { get; set; }
 
-    public ICollection<SettingPosition> Positions { get; set; } = new HashSet<SettingPosition>();
+    public ICollection<SettingsPosition> Positions { get; set; } = new HashSet<SettingsPosition>();
 }

@@ -1,17 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using RaportProduction.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RaportProduction.Infrastructure.Persistance.Configurations
 {
-    public class SettingsPositionConfiguration : IEntityTypeConfiguration<SettingPosition>
+    public class SettingsPositionConfiguration : IEntityTypeConfiguration<SettingsPosition>
     {
-        public void Configure(EntityTypeBuilder<SettingPosition> builder)
+        public void Configure(EntityTypeBuilder<SettingsPosition> builder)
         {
             builder.ToTable("SettingsPositions");
 
