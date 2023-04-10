@@ -2,7 +2,7 @@
 
 namespace RaportProduction.Domain.Entities;
 
-public class SettingPosition
+public class SettingsPosition
 {
     public int Id { get; set; }
     public string Key { get; set; }

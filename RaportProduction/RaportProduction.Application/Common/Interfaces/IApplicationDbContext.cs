@@ -15,7 +15,7 @@ public interface IApplicationDbContext : IDisposable
     DbSet<Product> Products { get; set; }
     DbSet<ProductionTime> ProductionTimes { get; set; }
     DbSet<Raport> Raports { get; set; }
-    DbSet<SettingPosition> SettingPositions { get; set; }
+    DbSet<SettingsPosition> SettingPositions { get; set; }
     DbSet<Settings> Settings { get; set; }
     DbSet<Tank> Tanks { get; set; }
 

@@ -18,7 +18,7 @@ public class ApplicationDbContext: DbContext, IApplicationDbContext
     public DbSet<Product> Products { get; set; }
     public DbSet<ProductionTime> ProductionTimes { get; set; }
     public DbSet<Raport> Raports { get; set; }
-    public DbSet<SettingPosition> SettingPositions { get; set; }
+    public DbSet<SettingsPosition> SettingPositions { get; set; }
     public DbSet<Settings> Settings { get; set; }
     public DbSet<Tank> Tanks { get; set; }
 
