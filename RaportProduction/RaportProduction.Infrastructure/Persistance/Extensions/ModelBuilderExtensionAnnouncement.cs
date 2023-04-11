@@ -16,7 +16,7 @@ static class ModelBuilderExtensionAnnouncement
             new Announcement
             {
                 Id = 1,
-                Date=new DateTime(2022,11,21),
+                Date = new DateTime(2022,11,21),
                 Description = "Kod testowy- ogłoszenie"
             },
             new Announcement

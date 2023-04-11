@@ -1,12 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RaportProduction.Application.Common.Interfaces;
 using RaportProduction.Domain.Entities;
+using RaportProduction.Infrastructure.Persistance.Extensions;
 using System.Reflection;
 using File = RaportProduction.Domain.Entities.File;
 
 namespace RaportProduction.Infrastructure.Persistance;
 
-public class ApplicationDbContext: DbContext, IApplicationDbContext
+public class ApplicationDbContext : DbContext, IApplicationDbContext
 {
 
     public DbSet<Address> Addresses { get; set; }
@@ -29,7 +30,11 @@ public class ApplicationDbContext: DbContext, IApplicationDbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-       modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+
+        modelBuilder.SeedAnnouncement();
+        modelBuilder.SeedSettings();
+        modelBuilder.SeedSettingsPosition();
     }
 
 }
