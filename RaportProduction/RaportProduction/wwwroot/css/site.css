@@ -16,3 +16,13 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.main-navbar{
+
+    font-size:1.25rem
+
+}
+
+a{
+    text-decoration: none;
+}

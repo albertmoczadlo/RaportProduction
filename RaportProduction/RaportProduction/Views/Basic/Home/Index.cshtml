@@ -1,5 +1,9 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@inject IConfiguration configuration
+
+@{
+    var templateKey = configuration.GetSection("TemplateKey").Value;
+    Layout = $"/Views/{templateKey}/Shared/_LayoutMain.cshtml";
+    ViewData["Title"] = "Strona Główna";
 }
 
 <div class="text-center">
