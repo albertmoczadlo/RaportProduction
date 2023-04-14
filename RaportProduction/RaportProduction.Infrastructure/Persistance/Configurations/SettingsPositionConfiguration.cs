@@ -4,9 +4,9 @@ using RaportProduction.Domain.Entities;
 
 namespace RaportProduction.Infrastructure.Persistance.Configurations
 {
-    public class SettingsPositionConfiguration : IEntityTypeConfiguration<SettingPosition>
+    public class SettingsPositionConfiguration : IEntityTypeConfiguration<SettingsPosition>
     {
-        public void Configure(EntityTypeBuilder<SettingPosition> builder)
+        public void Configure(EntityTypeBuilder<SettingsPosition> builder)
         {
             builder.ToTable("SettingsPositions");
 

@@ -18,7 +18,7 @@ namespace RaportProduction.Controllers
 
         public async Task<IActionResult> Index()
         {
-            throw new Exception("Nie obsłużony błąd");
+           await Mediator.Send(new AddRaportCommand { Name = "Test" });
 
             return View();
         }

@@ -36,7 +36,7 @@ namespace RaportProduction.Infrastructure.Persistance.Configurations
             builder
                 .Property(q => q.Quantity)
                 .HasPrecision(9, 0)
-                .IsRequired(false);
+                .IsRequired(true);
 
             builder
                 .Property(u=>u.Comments)

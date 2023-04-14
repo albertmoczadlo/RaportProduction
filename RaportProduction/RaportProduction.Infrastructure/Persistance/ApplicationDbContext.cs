@@ -1,11 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using RaportProduction.Application.Common.Interfaces;
 using RaportProduction.Domain.Entities;
+using RaportProduction.Infrastructure.Persistance.Extensions;
 using System.Reflection;
 using File = RaportProduction.Domain.Entities.File;
 
 namespace RaportProduction.Infrastructure.Persistance;
 
-public class ApplicationDbContext: DbContext
+public class ApplicationDbContext : DbContext, IApplicationDbContext
 {
 
     public DbSet<Address> Addresses { get; set; }
@@ -17,7 +19,7 @@ public class ApplicationDbContext: DbContext
     public DbSet<Product> Products { get; set; }
     public DbSet<ProductionTime> ProductionTimes { get; set; }
     public DbSet<Raport> Raports { get; set; }
-    public DbSet<SettingPosition> SettingPositions { get; set; }
+    public DbSet<SettingsPosition> SettingPositions { get; set; }
     public DbSet<Settings> Settings { get; set; }
     public DbSet<Tank> Tanks { get; set; }
 
@@ -28,7 +30,11 @@ public class ApplicationDbContext: DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-       modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+
+        modelBuilder.SeedAnnouncement();
+        modelBuilder.SeedSettings();
+        modelBuilder.SeedSettingsPosition();
     }
 
 }

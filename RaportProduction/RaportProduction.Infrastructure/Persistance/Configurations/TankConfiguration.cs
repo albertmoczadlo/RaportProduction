@@ -14,7 +14,5 @@ public class TankConfiguration : IEntityTypeConfiguration<Tank>
     public void Configure(EntityTypeBuilder<Tank> builder)
     {
         builder.ToTable("Tanks");
-
-        
     }
 }

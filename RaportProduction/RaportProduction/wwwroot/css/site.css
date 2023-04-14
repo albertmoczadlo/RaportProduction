@@ -13,6 +13,20 @@ html {
   min-height: 100%;
 }
 
-body {
-  margin-bottom: 60px;
+
+.main-navbar{
+
+    font-size:1.25rem
+}
+
+a{
+    text-decoration: none;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    filter:invert(100%);
+}
+
+.main-description{
+    font-size: 1.25rem;
 }
