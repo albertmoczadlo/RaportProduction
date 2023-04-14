@@ -6,7 +6,119 @@
     ViewData["Title"] = "Strona Główna";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div id="carouselExampleControls" class="carousel slide mt-5 mb-5" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="~/images/fabryka.png" class="d-block w-100" alt="Budynki fabryki">
+        </div>
+        <div class="carousel-item">
+            <img src="~/images/linia_produkcyjna.png" class="d-block w-100" alt="Linia produkcyjna">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<div class="bg-light">
+    <div class="container mb-5">
+        <div class="row">
+            <div class="main-description p-5">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Fusce ac ipsum vitae sem hendrerit tincidunt sit amet vel leo.
+                Curabitur bibendum felis vitae justo aliquet lacinia. Sed posuere velit vel risus bibendum,
+                id dictum lorem commodo. Maecenas luctus eu ipsum ac vulputate. Nullam suscipit nisl quis lorem rhoncus ullamcorper.
+                Donec eget enim nisl. Quisque sodales vel lacus id viverra. Sed in erat ultrices, rhoncus leo a, lobortis sapien.
+                Suspendisse ut odio aliquam, euismod enim a, tempor lectus. Nulla facilisi. Ut non dui maximus, bibendum enim eu, cursus velit.
+                Nunc id enim nec urna pulvinar commodo. Sed euismod sapien quis lectus sollicitudin, nec elementum libero euismod.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-3 mt-5 secondary-description">
+
+        <div class="col">
+            <div class="card border-0 m-5">
+                <img src="~/images/production.png" class="card-img-top" alt="fabryka" />
+
+                <div class="card-body">
+                    <h4 class="card-title">Fabryka</h4>
+                    <p class="card-text">
+                        Donec eget enim nisl. Quisque sodales vel lacus id viverra. Sed in erat ultrices, rhoncus leo a, lobortis sapien.
+                        Suspendisse ut odio aliquam, euismod enim a, tempor lectus. Nulla facilisi
+                    </p>
+                    <a href="#" class="btn btn-primary btn-sm">Zobacz</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card border-0 m-5">
+                <img src="~/images/machine.png" class="card-img-top" alt="maszyna" />
+
+                <div class="card-body">
+                    <h4 class="card-title">Produkcja</h4>
+                    <p class="card-text">
+                        Donec eget enim nisl. Quisque sodales vel lacus id viverra. Sed in erat ultrices, rhoncus leo a, lobortis sapien.
+                        Suspendisse ut odio aliquam, euismod enim a, tempor lectus. Nulla facilisi
+                    </p>
+                    <a href="#" class="btn btn-primary btn-sm">Zobacz</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card border-0 m-5">
+                <img src="~/images/people.png" class="card-img-top" alt="ludzie" />
+
+                <div class="card-body">
+                    <h4 class="card-title">Pracownicy</h4>
+                    <p class="card-text">
+                        Donec eget enim nisl. Quisque sodales vel lacus id viverra. Sed in erat ultrices, rhoncus leo a, lobortis sapien.
+                        Suspendisse ut odio aliquam, euismod enim a, tempor lectus. Nulla facilisi
+                    </p>
+                    <a href="#" class="btn btn-primary btn-sm">Zobacz</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card border-0 m-5">
+                <img src="~/images/traffic.png" class="card-img-top" alt="statystyki" />
+
+                <div class="card-body">
+                    <h4 class="card-title">Statystyki</h4>
+                    <p class="card-text">
+                        Donec eget enim nisl. Quisque sodales vel lacus id viverra. Sed in erat ultrices, rhoncus leo a, lobortis sapien.
+                        Suspendisse ut odio aliquam, euismod enim a, tempor lectus. Nulla facilisi
+                    </p>
+                    <a href="#" class="btn btn-primary btn-sm">Zobacz</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card border-0 m-5">
+                <img src="~/images/magazyn.png" class="card-img-top" alt="magazy" />
+
+                <div class="card-body">
+                    <h4 class="card-title">Statystyki</h4>
+                    <p class="card-text">
+                        Donec eget enim nisl. Quisque sodales vel lacus id viverra. Sed in erat ultrices, rhoncus leo a, lobortis sapien.
+                        Suspendisse ut odio aliquam, euismod enim a, tempor lectus. Nulla facilisi
+                    </p>
+                    <a href="#" class="btn btn-primary btn-sm">Zobacz</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
 </div>
