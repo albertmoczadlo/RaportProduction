@@ -14,18 +14,26 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
-        builder.Logging.ClearProviders();
-        builder.Logging.SetMinimumLevel(LogLevel.Information);
-        builder.Logging.AddNLogWeb();
+        builder.Logging
+            .ClearProviders();
+        builder.Logging
+            .SetMinimumLevel(LogLevel.Information);
+        builder.Logging
+            .AddNLogWeb();
 
-        builder.Services.AddCulture();
+        builder.Services
+            .AddCulture();
 
-        builder.Services.AddApplication();
-        builder.Services.AddInfrastructure(builder.Configuration);
+        builder.Services
+            .AddApplication();
+        builder.Services
+            .AddInfrastructure(builder.Configuration);
 
-        builder.Services.DefineViewLocation(builder.Configuration);
+        builder.Services
+            .DefineViewLocation(builder.Configuration);
 
-        builder.Services.AddControllersWithViews();
+        builder.Services
+            .AddControllersWithViews();
 
         var app = builder.Build();
 

@@ -1,6 +1,22 @@
-﻿@{
+﻿@inject IConfiguration configuration;
+
+@{
+    var templateKey = configuration.GetSection("TemplateKey").Value;
+    Layout = $"/Views/{templateKey}/Shared/_LayoutMain.cshtml";
     ViewData["Title"] = "Privacy Policy";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<div class="container">
+    <div class="pt-3 pb-5">
+        <h1>@ViewBag.Title</h1>
+        <p>
+            Lorem ipsum is a placeholder text commonly used in the graphic,
+            print, and web design industries as a mock-up for various elements such as fonts,
+            layouts, and graphics. It consists of random Latin words and phrases that do not have
+            any coherent meaning or message, and is often used to fill space in a design before
+            actual content is created. Its use allows designers to focus on the visual elements
+            of their work without being distracted by the content, and it has been a standard
+            tool in the design industry for many years.
+        </p>
+    </div>
+</div>
