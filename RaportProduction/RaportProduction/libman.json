@@ -13,7 +13,6 @@
       ]
     },
     {
-      "provider": "cdnjs",
       "library": "globalize@1.7.0",
       "destination": "wwwroot/lib/globalize/",
       "files": [
@@ -39,6 +38,14 @@
       "destination": "wwwroot/lib/jquery-validation-globalize-fix/",
       "files": [
         "jquery.validate.globalize.js"
+      ]
+    },
+    {
+      "provider": "jsdelivr",
+      "library": "jquery.cookie@1.4.1",
+      "destination": "wwwroot/lib/jquery.cookie/",
+      "files": [
+        "jquery.cookie.min.js"
       ]
     }
   ]
