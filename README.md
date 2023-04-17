@@ -4,6 +4,7 @@
 
 The project is created using the following technologies:
 
+- MVC
 - Onion architecture
 - CQRS
 - C#
