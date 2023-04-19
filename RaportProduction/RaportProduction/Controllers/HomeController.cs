@@ -18,8 +18,6 @@ namespace RaportProduction.Controllers
 
         public async Task<IActionResult> Index()
         {
-           await Mediator.Send(new AddRaportCommand { Name = "Test" });
-
             return View();
         }
 
@@ -28,10 +26,9 @@ namespace RaportProduction.Controllers
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public IActionResult Contact()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View();
         }
     }
 }

@@ -1,0 +1,41 @@
+﻿@using RaportProduction.Application.Contacts.Commands.SendContactEmail
+@inject IConfiguration configuration;
+@model SendContactEmailCommand
+
+
+@{
+    var templateKey = configuration.GetSection("TemplateKey").Value;
+    Layout = $"/Views/{templateKey}/Shared/_LayoutMain.cshtml";
+    ViewData["Title"] = "Contact";
+}
+
+<div class="container">
+    <div class="row mt-3 mb-5">
+
+        <h2>@ViewBag.Title</h2>
+
+        @using (Html.BeginForm("Contact", "Home"))
+        {
+           @Html.AntiForgeryToken()
+
+           <div class="form-group w-75 mt-3">
+               @Html.TextBoxFor(x=>x.Name, new {@class="form-control", placeholder="Name and Surname"})
+           </div>
+
+            <div class="form-group w-75 mt-3">
+                @Html.TextBoxFor(x=>x.Email, new {@class="form-control", placeholder="Email"})
+            </div>
+
+            <div class="form-group w-75 mt-3">
+                @Html.TextBoxFor(x=>x.Title, new {@class="form-control", placeholder="Title"})
+            </div>
+
+            <div class="form-group w-75 mt-3">
+                @Html.TextAreaFor(x=>x.Message, new {@class="form-control", placeholder="Message", @rows=4})
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg mt-4"> Send </button>
+        }
+
+    </div>
+</div>

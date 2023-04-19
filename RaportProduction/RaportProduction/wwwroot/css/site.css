@@ -13,7 +13,6 @@ html {
   min-height: 100%;
 }
 
-
 .main-navbar{
 
     font-size:1.25rem
@@ -44,4 +43,9 @@ a{
 
 .privacy-police-btn{
     font-size:11px;
+}
+
+.navbar-brand img {
+    max-height: 100%;
+    max-width: 60%;
 }

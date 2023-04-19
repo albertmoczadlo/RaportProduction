@@ -14,16 +14,24 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
-        builder.Logging.ClearProviders();
-        builder.Logging.SetMinimumLevel(LogLevel.Information);
-        builder.Logging.AddNLogWeb();
 
-        builder.Services.AddCulture();
+        builder.Logging
+            .ClearProviders();
+        builder.Logging
+            .SetMinimumLevel(LogLevel.Information);
+        builder.Logging
+            .AddNLogWeb();
 
-        builder.Services.AddApplication();
-        builder.Services.AddInfrastructure(builder.Configuration);
+        builder.Services
+            .AddCulture();
 
-        builder.Services.DefineViewLocation(builder.Configuration);
+        builder.Services
+            .AddApplication();
+        builder.Services
+            .AddInfrastructure(builder.Configuration);
+
+        builder.Services
+            .DefineViewLocation(builder.Configuration);
 
         builder.Services.AddControllersWithViews();
 
@@ -42,7 +50,7 @@ public class Program
 
         var logger = app.Services.GetService<ILogger<Program>>();
 
-        if(app.Environment.IsDevelopment())
+        if (app.Environment.IsDevelopment())
         {
             logger.LogInformation("Development mode");
         }
@@ -53,14 +61,13 @@ public class Program
 
         app.UseHttpsRedirection();
         app.UseStaticFiles();
-
         app.UseRouting();
-
         app.UseAuthorization();
 
         app.MapControllerRoute(
             name: "default",
             pattern: "{controller=Home}/{action=Index}/{id?}");
+
 
         app.Run();
     }
