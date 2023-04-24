@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using RaportProduction.Application.Common.Interfaces;
 using RaportProduction.Infrastructure.Persistance;
+using RaportProduction.Infrastructure.Services;
 
 namespace RaportProduction.Infrastructure
 {
@@ -18,11 +19,19 @@ namespace RaportProduction.Infrastructure
             services.AddDbContext<ApplicationDbContext>(options=>
                                  options.UseSqlServer(connectionString).EnableSensitiveDataLogging());
 
+            services.AddSingleton<IAppSettingsService, AppSettingsService>();
+
             return services;
         }
 
-        public static IApplicationBuilder UseInfrastructure(this IApplicationBuilder app)
+        public static IApplicationBuilder UseInfrastructure(
+            this IApplicationBuilder app,
+            IApplicationDbContext context,
+            IAppSettingsService appSettingsService
+            )
         {
+            appSettingsService.Update(context).GetAwaiter().GetResult();
+
             return app;
         }
     }

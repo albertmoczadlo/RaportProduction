@@ -1,6 +1,7 @@
 
 using NLog.Web;
 using RaportProduction.Application;
+using RaportProduction.Application.Common.Interfaces;
 using RaportProduction.Infrastructure;
 using RaportProduction.UI.Extensions;
 using RaportProduction.UI.Middlewares;
@@ -37,7 +38,12 @@ public class Program
 
         var app = builder.Build();
 
-        app.UseInfrastructure();
+        using (var scope = app.Services.CreateScope())
+        {
+            app.UseInfrastructure(
+                scope.ServiceProvider.GetRequiredService<IApplicationDbContext>(),
+                app.Services.GetService<IAppSettingsService>());
+        }
 
         if (!app.Environment.IsDevelopment())
         {
