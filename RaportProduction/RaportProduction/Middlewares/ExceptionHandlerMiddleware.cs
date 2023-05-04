@@ -34,7 +34,7 @@ public class ExceptionHandlerMiddleware
     {
         context.Response.ContentType = "application/json";
         int statusCode = (int)HttpStatusCode.InternalServerError;
-        var result = JsonConvert.SerializeObject(new 
+        var result = JsonConvert.SerializeObject(new
         {
             StatusCode = statusCode,
             ErrorMessage = exception.Message

@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RaportProduction.Application.Common.Interfaces
+namespace RaportProduction.Application.Common.Interfaces;
+
+public interface IEmail
 {
-    public interface IEmail
-    {
-        Task SendAsync(string subject, string body, string to, string attachmentPath = null);
-    }
+    Task SendAsync(string subject, string body, string to, string attachmentPath = null);
+    Task Update(IAppSettingsService appSettingsService);
 }

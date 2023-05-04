@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RaportProduction.Application.Contacts.Commands.SendContactEmail;
 using RaportProduction.Application.Raports.Commands.AddRaport;
 using RaportProduction.Application.Raports.Queries.GetRaportById;
 using RaportProduction.Models;
@@ -28,7 +29,16 @@ namespace RaportProduction.Controllers
 
         public IActionResult Contact()
         {
-            return View();
+            return View(new SendContactEmailCommand());
+        }
+
+        [ValidateAntiForgeryToken]
+        [HttpPost]
+        public async Task<IActionResult> Contact(SendContactEmailCommand command)
+        {
+            await Mediator.Send(command);
+
+            return RedirectToAction("Contact");
         }
     }
 }

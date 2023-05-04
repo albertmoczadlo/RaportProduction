@@ -489,7 +489,7 @@ namespace RaportProduction.Infrastructure.Persistance.Migrations
                             Order = 3,
                             SettingsId = 2,
                             Type = 0,
-                            Value = "albertmoczadlo@gmail.com"
+                            Value = "testappjedi@gmail.com"
                         });
                 });
 
