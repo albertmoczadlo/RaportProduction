@@ -93,7 +93,7 @@ static class ModelBuilderExtensionSettingsPosition
             {
                 Id = 9,
                 Key = SettingsDict.AdminEmail,
-                Value = "albertmoczadlo@gmail.com",
+                Value = "testappjedi@gmail.com",
                 Description = "Adres administratora",
                 Type = Domain.Enums.SettingsType.Text,
                 SettingsId = 2,
