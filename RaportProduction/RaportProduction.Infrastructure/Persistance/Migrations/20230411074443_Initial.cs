@@ -283,7 +283,7 @@ namespace RaportProduction.Infrastructure.Persistance.Migrations
                     { 6, "Login nadawcy", "SenderLogin", 6, 1, 0, " " },
                     { 7, "Czy wyświetlać baner na stronie głównej?", "BannerVisible", 1, 2, 1, "True" },
                     { 8, "Kolor footera strony głónej", "FooterColor", 2, 2, 5, "#dc3545" },
-                    { 9, "Adres administratora", "AdminEmail", 3, 2, 0, "albertmoczadlo@gmail.com" }
+                    { 9, "Adres administratora", "AdminEmail", 3, 2, 0, "testappjedi@gmail.com" }
                 });
 
             migrationBuilder.CreateIndex(
