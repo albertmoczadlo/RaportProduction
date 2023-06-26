@@ -49,3 +49,8 @@ a{
     max-height: 100%;
     max-width: 60%;
 }
+
+.field-validation-error{
+    color: #ff3333;
+    margin-left: .5rem;
+}

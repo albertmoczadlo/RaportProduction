@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RaportProduction.Application.Common.Exceptions;
 using RaportProduction.Application.Contacts.Commands.SendContactEmail;
 using RaportProduction.Application.Raports.Commands.AddRaport;
 using RaportProduction.Application.Raports.Queries.GetRaportById;
@@ -36,7 +37,12 @@ namespace RaportProduction.Controllers
         [HttpPost]
         public async Task<IActionResult> Contact(SendContactEmailCommand command)
         {
-            await Mediator.Send(command);
+            var result = await MediatorSendValidate(command);
+
+            if (!result.IsValid)
+            {
+                return View(command);
+            }
 
             return RedirectToAction("Contact");
         }
