@@ -16,5 +16,6 @@ public class SendContactEmailCommand:IRequest
 
     [Required(ErrorMessage = "Message field is required")]
     public string Message { get; set; }
+    public string AntySpamResult { get; set; }
 
 }

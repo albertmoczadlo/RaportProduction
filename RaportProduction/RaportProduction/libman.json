@@ -47,6 +47,11 @@
       "files": [
         "jquery.cookie.min.js"
       ]
+    },
+    {
+      "provider": "jsdelivr",
+      "library": "cldr-core@43.1.0",
+      "destination": "wwwroot/lib/cldr-core/"
     }
   ]
 }
