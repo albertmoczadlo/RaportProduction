@@ -1,4 +1,5 @@
 
+using AspNetCore.ReCaptcha;
 using NLog.Web;
 using RaportProduction.Application;
 using RaportProduction.Application.Common.Interfaces;
@@ -22,15 +23,14 @@ public class Program
             .SetMinimumLevel(LogLevel.Information);
         builder.Logging
             .AddNLogWeb();
-
         builder.Services
             .AddCulture();
-
+        builder.Services
+            .AddReCaptcha(builder.Configuration.GetSection("ReCaptcha"));
         builder.Services
             .AddApplication();
         builder.Services
             .AddInfrastructure(builder.Configuration);
-
         builder.Services
             .DefineViewLocation(builder.Configuration);
 
