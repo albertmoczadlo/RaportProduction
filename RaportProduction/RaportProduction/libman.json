@@ -52,6 +52,22 @@
       "provider": "jsdelivr",
       "library": "cldr-core@43.1.0",
       "destination": "wwwroot/lib/cldr-core/"
+    },
+    {
+      "provider": "jsdelivr",
+      "library": "cldr-dates-modern@43.1.0",
+      "destination": "wwwroot/lib/cldr-dates-modern/",
+      "files": [
+        "main/ca/ca-gregorian.json"
+      ]
+    },
+    {
+      "library": "toastr.js@2.1.4",
+      "destination": "wwwroot/lib/toastr.js/",
+      "files": [
+        "toastr.min.js",
+        "toastr.min.css"
+      ]
     }
   ]
 }

@@ -47,6 +47,8 @@ namespace RaportProduction.Controllers
                 return View(command);
             }
 
+            TempData["Success"] = "Message send";
+
             return RedirectToAction("Contact");
         }
     }
