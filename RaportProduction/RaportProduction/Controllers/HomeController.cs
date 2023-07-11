@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AspNetCore.ReCaptcha;
+using Microsoft.AspNetCore.Mvc;
 using RaportProduction.Application.Common.Exceptions;
 using RaportProduction.Application.Contacts.Commands.SendContactEmail;
 using RaportProduction.Application.Raports.Commands.AddRaport;
@@ -33,6 +34,7 @@ namespace RaportProduction.Controllers
             return View(new SendContactEmailCommand());
         }
 
+        [ValidateReCaptcha]
         [ValidateAntiForgeryToken]
         [HttpPost]
         public async Task<IActionResult> Contact(SendContactEmailCommand command)
@@ -41,8 +43,11 @@ namespace RaportProduction.Controllers
 
             if (!result.IsValid)
             {
+                ModelState.AddModelError("AntySpamResult","Fill in the ReCaptcha field (spam protection)");
                 return View(command);
             }
+
+            TempData["Success"] = "Message send";
 
             return RedirectToAction("Contact");
         }
